@@ -33,7 +33,7 @@ int main()
     
     for(i = 0; i<complement; i++){
         tmp = 1;
-        for (j=0; j<subset_len; j++) {
+        for (j=0; j < subset_len; j++) {
             if (complement_arr[i] == form_arr[j]) {
                 tmp = 0;
                 break;
@@ -46,12 +46,12 @@ int main()
 			}
 		}  
         for (int i = 0; i < set_len; i++) {
-        for (int j = i + 1; j < set_len; j++) {
-			if (united[i] > united[j]) {
-                reserver =  united[i];
-                united[i] = united[j];
-                united[j] = reserver;
-                sign *= -1;
+			for (int j = i + 1; j < set_len; j++) {
+				if (united[i] > united[j]) {
+					reserver =  united[i];
+					united[i] = united[j];
+					united[j] = reserver;
+					sign *= -1;
 				}
 			}
 		}
